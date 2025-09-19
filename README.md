@@ -7,9 +7,15 @@ This repository contains scripts and setup instructions for serving the **Qwen/Q
 ## 📂 Repository Structure
 
 - `docker/` – Scripts to build and run Docker containers for serving the model.
-- `notebooks/` – Jupyter notebooks for inference and evaluation experiments.
-- `scripts/` – Python scripts for batch inference and metric calculation.
-- `REPORT.md` – Full analysis, results, and prompt/decode sweeps.
+- `src/` – Python helper modules (prompts, post-processing, predictor, eval utils, etc.).
+- `REPORT.md` – Full analysis, results, and sweeps with explanations.
+- `1_run_prompt_vs_decode.py` – Sweep prompts vs decoding parameters, report pass@1 trends.
+- `2_run_postprocess_ablation.py` – Compare post-processing versions (v1/v2/v3).
+- `3_run_perf_scaling.py` – Baseline vs optimized profiles, performance scaling.
+- `4_qwen_eval_assignment.py` – End-to-end pipeline (main assignment run).
+- `run_scripts.sh` – Orchestrates all experiments sequentially.
+- `vllm_server.sh` – Helper to start the vLLM server with chosen model.
+- `LICENSE` – Open source license.
 
 ---
 
@@ -53,7 +59,7 @@ docker rm vllm-instruct
 
 ## 📊 Evaluation
 
-👉 Detailed results, prompt/decoding sweeps, and observations are documented in [`REPORT.md`](./REPORT.md).
+👉 Detailed results, prompt/decoding sweeps, and observations are documented in [`report.md`](./report.md).
 
 ---
 
