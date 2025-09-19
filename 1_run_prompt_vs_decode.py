@@ -18,9 +18,9 @@ from experiments import generate_and_eval
 # -------------------------
 # Config
 # -------------------------
-API_BASE = os.getenv("API_BASE", "http://10.182.0.6:8001/v1")
+API_BASE = os.getenv("API_BASE", "http://10.XX.XX.XX:8001/v1")
 MODEL_ID = os.getenv("MODEL_ID", "qwen-coder-0_5b-instruct")
-TOKEN    = os.getenv("VLLM_API_KEY", "RANDOM_PASSWORD")
+TOKEN    = os.getenv("VLLM_API_KEY", "<RANDOM_PASSWORD>")
 USE_CHAT = True
 
 PROMPT_VARIANTS = ["raw", "hardened_v1", "hardened_v2", "icl_v2"]

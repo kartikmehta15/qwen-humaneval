@@ -3,7 +3,7 @@ set -euo pipefail
 
 : "${MODEL_ID:=Qwen/Qwen2.5-Coder-0.5B-Instruct}"
 : "${PORT:=8001}"
-: "${VLLM_API_KEY:=RANDOM_PASSWORD}"
+: "${VLLM_API_KEY:=<RANDOM_PASSWORD>}"
 
 : "${GPU_MEMORY_UTILIZATION:=0.90}"
 : "${MAX_MODEL_LEN:=4096}"

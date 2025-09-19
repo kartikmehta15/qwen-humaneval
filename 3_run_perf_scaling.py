@@ -28,9 +28,9 @@ from prompts import get_header
 # -------------------------
 # Config
 # -------------------------
-API_BASE = os.getenv("API_BASE", "http://10.182.0.6:8001/v1")
+API_BASE = os.getenv("API_BASE", "http://10.XX.XX.XX:8001/v1")
 MODEL_ID = os.getenv("MODEL_ID", "qwen-coder-0_5b-instruct")
-TOKEN    = os.getenv("VLLM_API_KEY", "RANDOM_PASSWORD")
+TOKEN    = os.getenv("VLLM_API_KEY", "<RANDOM_PASSWORD>")
 USE_CHAT = True
 
 RUN_DIR = Path("he_runs"); RUN_DIR.mkdir(parents=True, exist_ok=True)
