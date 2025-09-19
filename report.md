@@ -25,16 +25,18 @@ We evaluated **Qwen-2.5-Coder-0.5B** on HumanEval using a reproducible pipeline 
 ---
 
 ## 1. Prompt & Decode Sweep
+# 1. Prompt & Decode Sweep
+
 We swept prompts and decode configs to find the best combinations.
 
-| Prompt        | Decode              | pass@1 | compile | avg_len | median | gen_s | 
-|---------------|---------------------|--------|---------|---------|--------|-------|----------|
-| raw           | t0.2_p0.95_len512  | 0.364  | 0.939   | 126.4   | 81     | 94.2  | 
-| hardened_v1   | t0.2_p0.95_len512  | 0.364  | 0.848   | 164.2   | 147    | 106.2 | 
-| **hardened_v2** | **t0.2_p0.95_len512** | **0.485**  | **0.909**   | **218.5**   | **214**    | 107.2 | 
-| icl_v2        | t0.2_p0.95_len512  | 0.364  | 0.939   | 160.9   | 150    | 113.3 | 
+| Prompt        | Decode              | pass@1 | compile | avg_len | median | gen_s |
+|---------------|---------------------|--------|---------|---------|--------|-------|
+| raw           | t0.2_p0.95_len512   | 0.364  | 0.939   | 126.4   | 81     | 94.2  |
+| hardened_v1   | t0.2_p0.95_len512   | 0.364  | 0.848   | 164.2   | 147    | 106.2 |
+| hardened_v2   | t0.2_p0.95_len512   | 0.485  | 0.909   | 218.5   | 214    | 107.2 |
+| icl_v2        | t0.2_p0.95_len512   | 0.364  | 0.939   | 160.9   | 150    | 113.3 |
 
-✅ **Observation:** Hardened prompts (especially v2) improve pass@1 — expected, since they constrain the model to produce more structured outputs.  
+✅ **Observation:** Hardened prompts (especially v2) improve pass@1 — expected, since they constrain the model to produce more structured outputs.
 
 ---
 
