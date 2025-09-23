@@ -24,8 +24,8 @@ We evaluated **Qwen-2.5-Coder-0.5B** on HumanEval using a reproducible pipeline 
 
 ---
 
-## 1. Prompt & Decode Sweep
-# 1. Prompt & Decode Sweep
+## 1. Prompt & Decode Sweep (20% sampling)
+# 1. Prompt & Decode Sweep 
 
 We swept prompts and decode configs to find the best combinations.
 
@@ -40,7 +40,7 @@ We swept prompts and decode configs to find the best combinations.
 
 ---
 
-## 2. Post-Processing Ablation
+## 2. Post-Processing Ablation (20% sampling)
 We tested multiple post-processing strategies.
 
 | Version | pass@1 | compile | N   | avg_len | median | 
@@ -53,7 +53,7 @@ We tested multiple post-processing strategies.
 
 ---
 
-## 3. Performance Scaling
+## 3. Performance Scaling (20% sampling)
 Compared baseline vs optimized inference profiles.
 
 | Profile   | pass@1 | compile | N   | avg_len | median | gen_s | ex/s | eval_s | 
